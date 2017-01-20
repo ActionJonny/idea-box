@@ -7,16 +7,23 @@
     <link type="text/css" rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <container class="main-container">
       <h1 class="logo-name">idea<span>box</span></h1>
-      <input id="input-field"class="title-input" placeholder="Title">
-      <input id="input-field" class="body-input" placeholder="Body">
-      <button class="save-button">save</button>
+      <textarea class="title-input field" placeholder="Title"></textarea>
+      <textarea class="body-input field" placeholder="Body"></textarea>
+      <button class="save-button" disabled>save</button>
     </container>
     <container class="bottom-container">
       <input class="search-field" placeholder="Search">
+      <div>
+        <ul>
+        </ul>
+      </div>
     </container>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="ideabox.js"></script>
   </body>
 </html>
