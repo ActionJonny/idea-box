@@ -94,28 +94,6 @@ $('.bottom-container').on('click', '.up-vote, .down-vote', function() {
   localStorage.setItem(id, JSON.stringify(storedObj))
 })
 
-// $('.bottom-container').on('click', '.up-vote', function() {
-//  var $getUpQuality = $(this).closest('.idea-section').find('.quality')
-//  var getUpQualityText = $getUpQuality.text()
-//  var newUpQuality = upVote(getUpQualityText)
-//  var id = $(this).closest('.idea-section').prop("id");
-//  var storedObj = JSON.parse(localStorage.getItem(id));
-//  $getUpQuality.text(newUpQuality);
-//  storedObj.quality = newUpQuality;
-//  localStorage.setItem(id, JSON.stringify(storedObj));
-// })
-//
-// $('.bottom-container').on('click', '.down-vote', function() {
-//  var $getDownQuality = $(this).closest('.idea-section').find('.quality')
-//  var getDownQualityText = $getDownQuality.text()
-//  var newDownQuality = downVote(getDownQualityText)
-//  var id = $(this).closest('.idea-section').prop("id");
-//  var storedObj = JSON.parse(localStorage.getItem(id));
-//  $getDownQuality.text(newDownQuality);
-//  storedObj.quality = newDownQuality;
-//  localStorage.setItem(id, JSON.stringify(storedObj));
-// })
-
 $('.bottom-container').on('blur', '.idea-title, .idea-body', function(){
   var id = $(this).closest('.idea-section').prop('id');
   var idea = JSON.parse(localStorage.getItem(id));
@@ -123,24 +101,6 @@ $('.bottom-container').on('blur', '.idea-title, .idea-body', function(){
   idea.body = $(this).closest('.idea-section').find('.idea-body').text();
   localStorage.setItem(id, JSON.stringify(idea));
 });
-
-// $('.bottom-container').on('blur', '.idea-title', function() {
-//   var getIdeaTitle = $(this).closest('.idea-section').find('.idea-title')
-//   var getIdeaTitleText = getIdeaTitle.text()
-//   var id = $(this).closest('.idea-section').prop('id')
-//   var storedObj = JSON.parse(localStorage.getItem(id))
-//   storedObj.title = getIdeaTitleText
-//   localStorage.setItem(id, JSON.stringify(storedObj))
-// })
-//
-// $('.bottom-container').on('blur', '.idea-body', function() {
-//   var getIdeaBody = $(this).closest('.idea-section').find('.idea-body')
-//   var getIdeaBodyText = getIdeaBody.text()
-//   var id = $(this).closest('.idea-section').prop('id')
-//   var storedObj = JSON.parse(localStorage.getItem(id))
-//   storedObj.body = getIdeaBodyText
-//   localStorage.setItem(id, JSON.stringify(storedObj))
-// })
 
 $('.search-field').on('keyup', function(){
   var searchTerm = $(this).val().toLowerCase();
